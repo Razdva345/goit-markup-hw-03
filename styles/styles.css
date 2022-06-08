@@ -67,13 +67,10 @@ img {
 	padding-left: 15px;
 	padding-right: 15px;
 	margin: 0 auto;
-	/* outline: 1px solid red; */
 }
 .section {
 	padding-top: 94px;
 	padding-bottom: 94px;
-
-	/* outline: 2px solid blue; */
 }
 
 /* ---------------------------HOVER & FOCUS----------------- */
@@ -156,7 +153,22 @@ img {
 	padding-top: 200px;
 	padding-bottom: 200px;
 
+	max-width: 1600px;
+	max-height: 600px;
+	margin-left: auto;
+	margin-right: auto;
+
 	background-color: var(--hero-bg-color);
+
+	background-image: linear-gradient(
+			to right,
+			rgba(47, 48, 58, 0.4),
+			rgba(47, 48, 58, 0.4)
+		),
+		url(../images/hero.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 
 	text-align: center;
 }
@@ -200,6 +212,11 @@ img {
 .hero-btn:focus {
 	background-color: #188ce8;
 }
+.hero-btn:active {
+	box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75) inset;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75) inset;
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75) inset;
+}
 
 /* --------------------------------ОСОБЕННОСТИ------------------ */
 .peculiarities {
@@ -212,8 +229,32 @@ img {
 .peculiarities-list-item {
 	min-width: 270px;
 }
+
 .peculiarities-list-item:not(:first-child) {
 	margin-left: 30px;
+}
+.peculiarities-list-item::before {
+	content: "";
+	display: block;
+	margin-bottom: 30px;
+	height: 120px;
+	background-color: #f5f4fa;
+	border-radius: 4px;
+
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.icon-attention::before {
+	background-image: url(../images/antenna.svg);
+}
+.icon-punctuality::before {
+	background-image: url(../images/clock.svg);
+}
+.icon-planning::before {
+	background-image: url(../images/diagram.svg);
+}
+.icon-technology::before {
+	background-image: url(../images/astronaut.svg);
 }
 
 .peculiarities-list-title {
@@ -231,7 +272,8 @@ img {
 /* --------------------------------ЧЕМ ЗАНИМАЕМСЯ------------------ */
 
 .works-title,
-.team-title {
+.team-title,
+.clients-title {
 	margin-bottom: 50px;
 
 	font-weight: 700;
@@ -288,6 +330,9 @@ img {
 	text-align: center;
 	font-size: 16px;
 	line-height: 1.18;
+}
+/* --------------------------------КЛИЕНТЫ------------------ */
+.clients-title {
 }
 /* --------------------------------FOOTER------------------ */
 
